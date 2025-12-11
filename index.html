@@ -1,207 +1,247 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ryan Aby | Computer Science</title>
+    <title>Ryan Aby | Computer Science Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
+        /* Custom scrollbar for the main content */
+        main::-webkit-scrollbar {
+            width: 8px;
+        }
+        main::-webkit-scrollbar-track {
+            background: #1e293b; /* slate-800 */
+        }
+        main::-webkit-scrollbar-thumb {
+            background-color: #334155; /* slate-700 */
+            border-radius: 20px;
+            border: 3px solid #1e293b; /* slate-800 */
+        }
     </style>
 </head>
-<body class="bg-slate-100 text-slate-800 py-10 px-4">
+<body class="bg-slate-900 text-slate-200">
 
-    <div class="max-w-4xl mx-auto bg-white shadow-xl rounded-lg overflow-hidden border-t-4 border-indigo-600">
-        
-        <header class="bg-slate-50 p-8 border-b border-slate-200 text-center sm:text-left">
-            <div class="flex flex-col sm:flex-row justify-between items-center">
-                <div>
-                    <h1 class="text-4xl font-bold text-slate-900 tracking-tight">Ryan Aby</h1>
-                    <p class="text-indigo-600 text-lg font-medium mt-1">Computer Science Student</p>
-                </div>
-                <div class="mt-4 sm:mt-0 text-center sm:text-right text-sm text-slate-600 space-y-1">
-                    <p><a href="mailto:ryan.aby@outlook.com" class="hover:text-indigo-600 transition">ryan.aby@outlook.com</a></p>
-                    <p>425-961-8515</p>
-                    <p><a href="https://linkedin.com/in/ryan-aby" class="text-indigo-600 hover:underline font-medium">linkedin.com/in/ryan-aby</a></p>
-                    <p>Seattle, WA</p>
-                </div>
+    <div class="flex flex-col md:flex-row min-h-screen">
+
+        <aside class="bg-slate-950 w-full md:w-64 md:fixed md:h-screen z-20 p-6 border-b md:border-r border-slate-800/50 shadow-xl">
+            <div class="mb-8">
+                <h2 class="text-2xl font-bold text-white tracking-wider">Menu</h2>
             </div>
-        </header>
+            <nav>
+                <ul class="space-y-3">
+                    <li><a href="#about" class="block py-2.5 px-4 rounded-lg text-slate-400 hover:bg-slate-800 hover:text-teal-300 transition-all duration-200 font-medium flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-teal-400 mr-3"></span>About</a></li>
+                    <li><a href="#education" class="block py-2.5 px-4 rounded-lg text-slate-400 hover:bg-slate-800 hover:text-teal-300 transition-all duration-200 font-medium flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-teal-400 mr-3"></span>Education</a></li>
+                    <li><a href="#experience" class="block py-2.5 px-4 rounded-lg text-slate-400 hover:bg-slate-800 hover:text-teal-300 transition-all duration-200 font-medium flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-teal-400 mr-3"></span>Experience</a></li>
+                    <li><a href="#projects" class="block py-2.5 px-4 rounded-lg text-slate-400 hover:bg-slate-800 hover:text-teal-300 transition-all duration-200 font-medium flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-teal-400 mr-3"></span>Projects</a></li>
+                    <li><a href="#skills" class="block py-2.5 px-4 rounded-lg text-slate-400 hover:bg-slate-800 hover:text-teal-300 transition-all duration-200 font-medium flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-teal-400 mr-3"></span>Skills</a></li>
+                </ul>
+            </nav>
+            <div class="mt-12 pt-6 border-t border-slate-800/50 text-slate-500 text-sm text-center md:text-left">
+                <p>© 2025 Ryan Aby.</p>
+                <p>Built with Tailwind CSS.</p>
+            </div>
+        </aside>
 
-        <div class="p-8 space-y-10">
-            
-            <section>
-                <h2 class="text-2xl font-bold text-slate-900 border-b-2 border-slate-200 pb-2 mb-6 flex items-center">
-                    <span class="bg-indigo-100 text-indigo-600 py-1 px-3 rounded-md text-sm mr-3">01</span> Education
-                </h2>
+        <main class="flex-1 md:ml-64 bg-slate-900 p-6 md:p-12 overflow-y-auto">
+            <div class="max-w-4xl mx-auto space-y-16">
                 
-                <div class="space-y-6">
-                    <div class="flex flex-col sm:flex-row justify-between sm:items-start">
-                        <div>
-                            <h3 class="text-xl font-bold text-slate-800">University of Washington</h3>
-                            <p class="text-slate-600">Bachelor of Science in Computer Science</p>
-                        </div>
-                        <div class="text-slate-500 text-sm font-medium mt-1 sm:mt-0 bg-slate-100 px-3 py-1 rounded-full inline-block sm:block text-center w-fit">
-                            Sept. 2025 – June 2029
-                        </div>
-                    </div>
-
-                    <div class="flex flex-col sm:flex-row justify-between sm:items-start">
-                        <div>
-                            <h3 class="text-xl font-bold text-slate-800">Issaquah High School</h3>
-                            <p class="text-slate-600">High School Degree</p>
-                        </div>
-                        <div class="text-slate-500 text-sm font-medium mt-1 sm:mt-0 bg-slate-100 px-3 py-1 rounded-full inline-block sm:block text-center w-fit">
-                            Aug. 2021 – June 2025
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <h2 class="text-2xl font-bold text-slate-900 border-b-2 border-slate-200 pb-2 mb-6 flex items-center">
-                    <span class="bg-indigo-100 text-indigo-600 py-1 px-3 rounded-md text-sm mr-3">02</span> Experience
-                </h2>
-
-                <div class="space-y-8">
-                    <div class="relative pl-4 border-l-2 border-indigo-200">
-                        <div class="flex flex-col sm:flex-row justify-between mb-2">
-                            <h3 class="text-lg font-bold text-slate-800">Undergraduate Research Assistant</h3>
-                            <span class="text-sm text-slate-500 italic">Oct. 2025 – Present</span>
-                        </div>
-                        <div class="text-indigo-600 font-medium text-sm mb-3">University of Washington | Seattle, WA</div>
-                        <ul class="list-disc list-outside ml-4 space-y-2 text-slate-600 leading-relaxed">
-                            <li>Advancing computer vision and machine learning in urban contexts.</li>
-                            <li>Used Hugging Face Transformers with Qwen 2.5-VL model to grade roads on confidential criteria.</li>
-                            <li>Using Google Street View and OpenStreetMap to find and label images for training machine learning models.</li>
-                        </ul>
-                        <div class="mt-3 flex flex-wrap gap-2">
-                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">OpenCV</span>
-                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Hugging Face</span>
-                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Qwen API</span>
-                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Google Colab</span>
+                <header id="about" class="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left bg-slate-800/50 p-8 rounded-3xl shadow-lg backdrop-blur-sm border border-slate-700/50">
+                    <img src="image_0.png" alt="Ryan Aby Headshot" class="w-40 h-40 rounded-full object-cover border-4 border-teal-400/80 shadow-2xl mb-6 sm:mb-0 sm:mr-10">
+                    
+                    <div>
+                        <h1 class="text-5xl font-extrabold text-white tracking-tight mb-3">Ryan Aby</h1>
+                        <p class="text-teal-300 text-2xl font-semibold mb-5">Computer Science Student</p>
+                        <div class="flex flex-wrap justify-center sm:justify-start gap-y-3 gap-x-6 text-slate-300">
+                            <a href="mailto:ryan.aby@outlook.com" class="flex items-center group hover:text-teal-300 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-slate-400 group-hover:text-teal-300 transition-colors" viewBox="0 0 20 20" fill="currentColor"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" /><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" /></svg>
+                                ryan.aby@outlook.com
+                            </a>
+                            <span class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-slate-400" viewBox="0 0 20 20" fill="currentColor"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" /></svg>425-961-8515</span>
+                            <a href="https://linkedin.com/in/ryan-aby" target="_blank" class="flex items-center group hover:text-teal-300 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-slate-400 group-hover:text-teal-300 transition-colors" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763h2.674v-8.59H3.668v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd" /></svg>
+                                linkedin.com/in/ryan-aby
+                            </a>
+                            <span class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-slate-400" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" /></svg>Seattle, WA</span>
                         </div>
                     </div>
+                </header>
 
-                    <div class="relative pl-4 border-l-2 border-indigo-200">
-                        <div class="flex flex-col sm:flex-row justify-between mb-2">
-                            <h3 class="text-lg font-bold text-slate-800">High School Intern</h3>
-                            <span class="text-sm text-slate-500 italic">June 2025 – August 2025</span>
+                <section id="education" class="scroll-mt-8">
+                    <h2 class="text-3xl font-bold text-white mb-8 flex items-center">
+                        <span class="bg-teal-400/10 text-teal-300 py-1.5 px-4 rounded-xl text-lg mr-4 border border-teal-400/20">01</span> Education
+                    </h2>
+                    
+                    <div class="space-y-6 bg-slate-800/30 p-8 rounded-2xl border border-slate-700/50">
+                        <div class="flex flex-col md:flex-row justify-between md:items-center gap-4">
+                            <div>
+                                <h3 class="text-2xl font-bold text-white">University of Washington</h3>
+                                <p class="text-lg text-slate-300 mt-1">Bachelor of Science in Computer Science</p>
+                            </div>
+                            <span class="text-teal-300 bg-slate-800 px-4 py-2 rounded-full text-sm font-medium border border-teal-400/30 whitespace-nowrap">
+                                Sept. 2025 – June 2029
+                            </span>
                         </div>
-                        <div class="text-indigo-600 font-medium text-sm mb-3">Azon Enterprises, Inc. | Seattle, WA</div>
-                        <ul class="list-disc list-outside ml-4 space-y-2 text-slate-600 leading-relaxed">
-                            <li>Perfected a ML model to filter floor plans, removing visual semantics to leave only rooms and doors with <strong>95% accuracy</strong>.</li>
-                            <li>Reduced manual processing time by <strong>90%</strong> by filtering 200 floor plans automatically.</li>
-                            <li>Pioneered the "3-week dev cycle," utilizing AI to ideate, develop, and deploy engineering efforts quickly.</li>
-                        </ul>
-                        <div class="mt-3 flex flex-wrap gap-2">
-                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">CycleGAN</span>
-                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Pix2Pix</span>
-                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Python</span>
+                        <hr class="border-slate-700/50">
+                        <div class="flex flex-col md:flex-row justify-between md:items-center gap-4">
+                            <div>
+                                <h3 class="text-2xl font-bold text-white">Issaquah High School</h3>
+                                <p class="text-lg text-slate-300 mt-1">High School Degree</p>
+                            </div>
+                            <span class="text-teal-300 bg-slate-800 px-4 py-2 rounded-full text-sm font-medium border border-teal-400/30 whitespace-nowrap">
+                                Aug. 2021 – June 2025
+                            </span>
                         </div>
                     </div>
+                </section>
 
-                    <div class="relative pl-4 border-l-2 border-indigo-200">
-                        <div class="flex flex-col sm:flex-row justify-between mb-2">
-                            <h3 class="text-lg font-bold text-slate-800">Intern</h3>
-                            <span class="text-sm text-slate-500 italic">June 2024 – Sept. 2024</span>
+                <section id="experience" class="scroll-mt-8">
+                    <h2 class="text-3xl font-bold text-white mb-8 flex items-center">
+                        <span class="bg-teal-400/10 text-teal-300 py-1.5 px-4 rounded-xl text-lg mr-4 border border-teal-400/20">02</span> Experience
+                    </h2>
+
+                    <div class="space-y-12 px-4">
+                        <div class="relative pl-8 border-l-2 border-teal-400/30">
+                            <div class="absolute -left-[9px] top-1 w-4 h-4 bg-slate-900 border-2 border-teal-400 rounded-full"></div>
+                            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-2">
+                                <h3 class="text-xl font-bold text-teal-300">Undergraduate Research Assistant</h3>
+                                <span class="text-sm text-slate-400 bg-slate-800 px-3 py-1 rounded-full border border-slate-700 mt-2 md:mt-0">Oct. 2025 – Present</span>
+                            </div>
+                            <div class="text-white font-medium text-base mb-4">University of Washington <span class="text-slate-500">|</span> Seattle, WA</div>
+                            <ul class="list-disc list-outside ml-5 space-y-3 text-slate-300 leading-relaxed mb-4">
+                                <li>Advancing computer vision and machine learning in urban contexts.</li>
+                                <li>Used Hugging Face Transformers with Qwen 2.5-VL model to grade roads on confidential criteria.</li>
+                                <li>Using Google Street View and OpenStreetMap to find and label images for training machine learning models.</li>
+                            </ul>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-slate-800/50 text-sky-300 text-xs font-medium rounded-full border border-sky-400/30">OpenCV</span>
+                                <span class="px-3 py-1 bg-slate-800/50 text-violet-300 text-xs font-medium rounded-full border border-violet-400/30">Hugging Face</span>
+                                <span class="px-3 py-1 bg-slate-800/50 text-sky-300 text-xs font-medium rounded-full border border-sky-400/30">Qwen API</span>
+                                <span class="px-3 py-1 bg-slate-800/50 text-sky-300 text-xs font-medium rounded-full border border-sky-400/30">Google Colab</span>
+                            </div>
                         </div>
-                        <div class="text-indigo-600 font-medium text-sm mb-3">Issaquah Highlands Council | Issaquah, WA</div>
-                        <ul class="list-disc list-outside ml-4 space-y-2 text-slate-600 leading-relaxed">
-                            <li>Developed a volunteer portal for use by 12,000 residents to create events and sign up for positions.</li>
-                            <li>Built 4 dashboards for tracking events, sign-ups, and volunteer hours.</li>
-                        </ul>
-                        <div class="mt-3 flex flex-wrap gap-2">
-                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">React.js</span>
-                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Node.js</span>
-                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">MySQL</span>
+
+                        <div class="relative pl-8 border-l-2 border-teal-400/30">
+                            <div class="absolute -left-[9px] top-1 w-4 h-4 bg-slate-900 border-2 border-teal-400 rounded-full"></div>
+                            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-2">
+                                <h3 class="text-xl font-bold text-teal-300">High School Intern</h3>
+                                <span class="text-sm text-slate-400 bg-slate-800 px-3 py-1 rounded-full border border-slate-700 mt-2 md:mt-0">June 2025 – August 2025</span>
+                            </div>
+                            <div class="text-white font-medium text-base mb-4">Azon Enterprises, Inc. <span class="text-slate-500">|</span> Seattle, WA</div>
+                            <ul class="list-disc list-outside ml-5 space-y-3 text-slate-300 leading-relaxed mb-4">
+                                <li>Perfected a ML model to filter floor plans, removing visual semantics to leave only rooms and doors with <strong class="text-teal-300">95% accuracy</strong>.</li>
+                                <li>Reduced manual processing time by <strong class="text-teal-300">90%</strong> by filtering 200 floor plans automatically.</li>
+                                <li>Pioneered the "3-week dev cycle," utilizing AI to ideate, develop, and deploy engineering efforts quickly.</li>
+                            </ul>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-slate-800/50 text-sky-300 text-xs font-medium rounded-full border border-sky-400/30">CycleGAN</span>
+                                <span class="px-3 py-1 bg-slate-800/50 text-sky-300 text-xs font-medium rounded-full border border-sky-400/30">Pix2Pix</span>
+                                <span class="px-3 py-1 bg-slate-800/50 text-teal-300 text-xs font-medium rounded-full border border-teal-400/30">Python</span>
+                            </div>
+                        </div>
+
+                        <div class="relative pl-8 border-l-2 border-teal-400/30">
+                            <div class="absolute -left-[9px] top-1 w-4 h-4 bg-slate-900 border-2 border-teal-400 rounded-full"></div>
+                            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-2">
+                                <h3 class="text-xl font-bold text-teal-300">Intern</h3>
+                                <span class="text-sm text-slate-400 bg-slate-800 px-3 py-1 rounded-full border border-slate-700 mt-2 md:mt-0">June 2024 – Sept. 2024</span>
+                            </div>
+                            <div class="text-white font-medium text-base mb-4">Issaquah Highlands Council <span class="text-slate-500">|</span> Issaquah, WA</div>
+                            <ul class="list-disc list-outside ml-5 space-y-3 text-slate-300 leading-relaxed mb-4">
+                                <li>Developed a volunteer portal for use by 12,000 residents to create events and sign up for positions.</li>
+                                <li>Built 4 dashboards for tracking events, sign-ups, and volunteer hours.</li>
+                            </ul>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-slate-800/50 text-sky-300 text-xs font-medium rounded-full border border-sky-400/30">React.js</span>
+                                <span class="px-3 py-1 bg-slate-800/50 text-sky-300 text-xs font-medium rounded-full border border-sky-400/30">Node.js</span>
+                                <span class="px-3 py-1 bg-slate-800/50 text-teal-300 text-xs font-medium rounded-full border border-teal-400/30">MySQL</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            <section>
-                <h2 class="text-2xl font-bold text-slate-900 border-b-2 border-slate-200 pb-2 mb-6 flex items-center">
-                    <span class="bg-indigo-100 text-indigo-600 py-1 px-3 rounded-md text-sm mr-3">03</span> Projects
-                </h2>
+                <section id="projects" class="scroll-mt-8">
+                    <h2 class="text-3xl font-bold text-white mb-8 flex items-center">
+                        <span class="bg-teal-400/10 text-teal-300 py-1.5 px-4 rounded-xl text-lg mr-4 border border-teal-400/20">03</span> Projects
+                    </h2>
+                    
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <div class="bg-slate-800/30 p-8 rounded-2xl border border-slate-700/50 hover:border-teal-400/50 hover:bg-slate-800/60 transition-all duration-300 shadow-lg group">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="text-2xl font-bold text-white group-hover:text-teal-300 transition-colors">Spotifriend</h3>
+                                <span class="text-xs font-medium text-slate-400 bg-slate-900/50 px-3 py-1.5 rounded-full border border-slate-700">Apr - June 2024</span>
+                            </div>
+                            <p class="text-slate-300 leading-relaxed mb-6">
+                                React/JS app using Spotify Web API to compare music taste with friends via leaderboards and similarity metrics.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="text-xs font-semibold text-teal-300 bg-teal-400/10 px-3 py-1.5 rounded-full border border-teal-400/30">React</span>
+                                <span class="text-xs font-semibold text-teal-300 bg-teal-400/10 px-3 py-1.5 rounded-full border border-teal-400/30">Node.js</span>
+                                <span class="text-xs font-semibold text-teal-300 bg-teal-400/10 px-3 py-1.5 rounded-full border border-teal-400/30">Spotify API</span>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-800/30 p-8 rounded-2xl border border-slate-700/50 hover:border-teal-400/50 hover:bg-slate-800/60 transition-all duration-300 shadow-lg group">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="text-2xl font-bold text-white group-hover:text-teal-300 transition-colors">Packet Sniffer</h3>
+                                <span class="text-xs font-medium text-slate-400 bg-slate-900/50 px-3 py-1.5 rounded-full border border-slate-700">Dec '23 - Jan '24</span>
+                            </div>
+                            <p class="text-slate-300 leading-relaxed mb-6">
+                                Designed a packet sniffer to visualize website response times by reading SYN-ACK packets to identify network congestion.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="text-xs font-semibold text-teal-300 bg-teal-400/10 px-3 py-1.5 rounded-full border border-teal-400/30">Python</span>
+                                <span class="text-xs font-semibold text-teal-300 bg-teal-400/10 px-3 py-1.5 rounded-full border border-teal-400/30">Flask</span>
+                                <span class="text-xs font-semibold text-teal-300 bg-teal-400/10 px-3 py-1.5 rounded-full border border-teal-400/30">HTML/CSS</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="skills" class="scroll-mt-8 mb-12">
+                    <h2 class="text-3xl font-bold text-white mb-8 flex items-center">
+                        <span class="bg-teal-400/10 text-teal-300 py-1.5 px-4 rounded-xl text-lg mr-4 border border-teal-400/20">04</span> Technical Skills
+                    </h2>
+                    
+                    <div class="bg-slate-800/30 p-8 rounded-2xl border border-slate-700/50">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            <div>
+                                <h3 class="text-sm font-bold text-slate-400 uppercase tracking-wider mb-4">Languages</h3>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-4 py-2 bg-slate-900/80 text-teal-300 text-sm font-medium rounded-lg border border-teal-400/30 shadow-sm">Java</span>
+                                    <span class="px-4 py-2 bg-slate-900/80 text-teal-300 text-sm font-medium rounded-lg border border-teal-400/30 shadow-sm">Python</span>
+                                    <span class="px-4 py-2 bg-slate-900/80 text-teal-300 text-sm font-medium rounded-lg border border-teal-400/30 shadow-sm">C#</span>
+                                    <span class="px-4 py-2 bg-slate-900/80 text-teal-300 text-sm font-medium rounded-lg border border-teal-400/30 shadow-sm">MySQL</span>
+                                    <span class="px-4 py-2 bg-slate-900/80 text-teal-300 text-sm font-medium rounded-lg border border-teal-400/30 shadow-sm">JavaScript</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-sm font-bold text-slate-400 uppercase tracking-wider mb-4">Frameworks & Tools</h3>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-4 py-2 bg-slate-900/80 text-sky-300 text-sm font-medium rounded-lg border border-sky-400/30 shadow-sm">Flask</span>
+                                    <span class="px-4 py-2 bg-slate-900/80 text-sky-300 text-sm font-medium rounded-lg border border-sky-400/30 shadow-sm">React</span>
+                                    <span class="px-4 py-2 bg-slate-900/80 text-sky-300 text-sm font-medium rounded-lg border border-sky-400/30 shadow-sm">Node.js</span>
+                                    <span class="px-4 py-2 bg-slate-900/80 text-sky-300 text-sm font-medium rounded-lg border border-sky-400/30 shadow-sm">Docker</span>
+                                    <span class="px-4 py-2 bg-slate-900/80 text-sky-300 text-sm font-medium rounded-lg border border-sky-400/30 shadow-sm">VS Code</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-sm font-bold text-slate-400 uppercase tracking-wider mb-4">Libraries</h3>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-4 py-2 bg-slate-900/80 text-violet-300 text-sm font-medium rounded-lg border border-violet-400/30 shadow-sm">Hugging Face</span>
+                                    <span class="px-4 py-2 bg-slate-900/80 text-violet-300 text-sm font-medium rounded-lg border border-violet-400/30 shadow-sm">OpenCV</span>
+                                    <span class="px-4 py-2 bg-slate-900/80 text-violet-300 text-sm font-medium rounded-lg border border-violet-400/30 shadow-sm">pandas</span>
+                                    <span class="px-4 py-2 bg-slate-900/80 text-violet-300 text-sm font-medium rounded-lg border border-violet-400/30 shadow-sm">Matplotlib</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="bg-slate-50 p-5 rounded-lg border border-slate-200 hover:border-indigo-300 transition shadow-sm">
-                        <div class="flex justify-between items-start mb-2">
-                            <h3 class="font-bold text-lg text-slate-800">Spotifriend</h3>
-                            <span class="text-xs text-slate-500 bg-white px-2 py-1 rounded border">Apr - June 2024</span>
-                        </div>
-                        <p class="text-sm text-slate-600 mb-4">
-                            React/JS app using Spotify Web API to compare music taste with friends via leaderboards and similarity metrics.
-                        </p>
-                        <div class="flex flex-wrap gap-1">
-                            <span class="text-xs font-semibold text-indigo-600 bg-indigo-50 px-2 py-1 rounded">React</span>
-                            <span class="text-xs font-semibold text-indigo-600 bg-indigo-50 px-2 py-1 rounded">Node.js</span>
-                            <span class="text-xs font-semibold text-indigo-600 bg-indigo-50 px-2 py-1 rounded">Spotify API</span>
-                        </div>
-                    </div>
-
-                    <div class="bg-slate-50 p-5 rounded-lg border border-slate-200 hover:border-indigo-300 transition shadow-sm">
-                        <div class="flex justify-between items-start mb-2">
-                            <h3 class="font-bold text-lg text-slate-800">Packet Sniffer</h3>
-                            <span class="text-xs text-slate-500 bg-white px-2 py-1 rounded border">Dec '23 - Jan '24</span>
-                        </div>
-                        <p class="text-sm text-slate-600 mb-4">
-                            Designed a packet sniffer to visualize website response times by reading SYN-ACK packets to identify network congestion.
-                        </p>
-                        <div class="flex flex-wrap gap-1">
-                            <span class="text-xs font-semibold text-indigo-600 bg-indigo-50 px-2 py-1 rounded">Python</span>
-                            <span class="text-xs font-semibold text-indigo-600 bg-indigo-50 px-2 py-1 rounded">Flask</span>
-                            <span class="text-xs font-semibold text-indigo-600 bg-indigo-50 px-2 py-1 rounded">HTML/CSS</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <h2 class="text-2xl font-bold text-slate-900 border-b-2 border-slate-200 pb-2 mb-6 flex items-center">
-                    <span class="bg-indigo-100 text-indigo-600 py-1 px-3 rounded-md text-sm mr-3">04</span> Technical Skills
-                </h2>
-                
-                <div class="space-y-4">
-                    <div>
-                        <h3 class="text-sm font-bold text-slate-400 uppercase tracking-wider mb-2">Languages</h3>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-slate-800 text-white text-sm rounded-full">Java</span>
-                            <span class="px-3 py-1 bg-slate-800 text-white text-sm rounded-full">Python</span>
-                            <span class="px-3 py-1 bg-slate-800 text-white text-sm rounded-full">C#</span>
-                            <span class="px-3 py-1 bg-slate-800 text-white text-sm rounded-full">MySQL</span>
-                            <span class="px-3 py-1 bg-slate-800 text-white text-sm rounded-full">JavaScript</span>
-                        </div>
-                    </div>
-                    <div>
-                        <h3 class="text-sm font-bold text-slate-400 uppercase tracking-wider mb-2">Frameworks & Tools</h3>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-white border border-slate-300 text-slate-700 text-sm rounded-full">Flask</span>
-                            <span class="px-3 py-1 bg-white border border-slate-300 text-slate-700 text-sm rounded-full">React</span>
-                            <span class="px-3 py-1 bg-white border border-slate-300 text-slate-700 text-sm rounded-full">Node.js</span>
-                            <span class="px-3 py-1 bg-white border border-slate-300 text-slate-700 text-sm rounded-full">Docker</span>
-                            <span class="px-3 py-1 bg-white border border-slate-300 text-slate-700 text-sm rounded-full">VS Code</span>
-                        </div>
-                    </div>
-                    <div>
-                        <h3 class="text-sm font-bold text-slate-400 uppercase tracking-wider mb-2">Libraries</h3>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-indigo-50 text-indigo-700 text-sm rounded-full font-medium">Hugging Face</span>
-                            <span class="px-3 py-1 bg-indigo-50 text-indigo-700 text-sm rounded-full font-medium">OpenCV</span>
-                            <span class="px-3 py-1 bg-indigo-50 text-indigo-700 text-sm rounded-full font-medium">pandas</span>
-                            <span class="px-3 py-1 bg-indigo-50 text-indigo-700 text-sm rounded-full font-medium">Matplotlib</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-        </div>
-        
-        <footer class="bg-slate-50 border-t border-slate-200 p-6 text-center text-slate-400 text-sm">
-            <p>&copy; 2025 Ryan Aby. Built with Tailwind CSS.</p>
-        </footer>
+            </div>
+        </main>
     </div>
 </body>
 </html>
