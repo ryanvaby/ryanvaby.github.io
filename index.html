@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryan Aby - Computer Science</title>
+    <style>
+        /* Basic Reset and Layout */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px 0;
+        }
+        header {
+            background: #2a6496; /* A professional blue */
+            color: #ffffff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #3a75ad 3px solid;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            text-transform: uppercase;
+        }
+        header p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+        /* Section Styling */
+        section {
+            padding: 20px;
+            margin-bottom: 20px;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        section h2 {
+            border-bottom: 2px solid #2a6496;
+            padding-bottom: 5px;
+            color: #2a6496;
+            margin-top: 0;
+        }
+        /* Item Styling (Experience/Project) */
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+        .item-title {
+            font-weight: bold;
+            font-size: 1.1em;
+            color: #000;
+        }
+        .item-date {
+            font-style: italic;
+            font-size: 0.9em;
+            color: #666;
+        }
+        ul {
+            padding-left: 20px;
+            margin-top: 5px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            list-style: none;
+            padding: 0;
+        }
+        .skills-grid strong {
+            display: block;
+            color: #2a6496;
+            margin-bottom: 3px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Ryan Aby</h1>
+            <p>
+                ryan.aby@outlook.com | 425-961-8515 | 
+                <a href="https://linkedin.com/in/ryan-aby" style="color: #ffffff;">LinkedIn</a>
+            </p>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="education">
+            <h2>Education</h2>
+            <div class="item-header">
+                <span class="item-title">University of Washington</span>
+                <span class="item-date">Seattle, WA | Sept. 2025 – June 2029</span>
+            </div>
+            <p style="margin: 0 0 15px 0;">Bachelor of Science in Computer Science</p>
+
+            <div class="item-header">
+                <span class="item-title">Issaquah High School</span>
+                <span class="item-date">Issaquah, WA | Aug. 2021 – June 2025</span>
+            </div>
+            <p style="margin: 0;">High School Degree</p>
+        </section>
+
+        <section id="experience">
+            <h2>Experience</h2>
+            <div class="item-header">
+                <span class="item-title">Undergraduate Research Assistant, University of Washington</span>
+                <span class="item-date">Seattle, WA | Oct. 2025 – Present</span>
+            </div>
+            <ul>
+                <li>Advancing computer vision and machine learning in urban contexts.</li>
+                <li>Used Hugging Face Transformers with Qwen 2.5-VL model to grade roads on confidential criteria.</li>
+                <li>Utilizing Google Street View and OpenStreetMap to find and label images for training machine learning models.</li>
+                <li>**Technologies:** OpenCV, Hugging Face Transformers, Qwen API, Google Colab.</li>
+            </ul>
+            
+            <div class="item-header">
+                <span class="item-title">High School Intern, Azon Enterprises, Inc.</span>
+                <span class="item-date">Seattle, WA | June 2025 – August 2025</span>
+            </div>
+            <ul>
+                <li>Perfected a machine learning model to automatically filter a floor plan to remove all visual semantics and extraneous symbols, leaving only rooms and doors.</li>
+                <li>Filtered 200 floor plans with 95% accuracy, which reduced manual processing time by 90%.</li>
+                <li>Pioneered the "3-week dev cycle," utilizing artificial intelligence to ideate, develop, and deploy or disband engineering efforts in a quick turnaround.</li>
+            </ul>
+
+            <div class="item-header">
+                <span class="item-title">Intern, Issaquah Highlands Council</span>
+                <span class="item-date">Issaquah, WA | June 2024 – Sept. 2024</span>
+            </div>
+            <ul>
+                <li>Directed to develop a volunteer portal for use by 12,000 residents.</li>
+                <li>Developed 4 dashboards showcasing events, sign-ups, and tracking volunteer hours.</li>
+                <li>**Technologies:** JavaScript, CSS, React.js, Node.js, Bootstrap, MySQL.</li>
+            </ul>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="item-header">
+                <span class="item-title">Spotifriend</span>
+                <span class="item-date">April 2024 – June 2024</span>
+            </div>
+            <p><strong>Technologies:</strong> Javascript, React, Node.js, MySQL, Spotify API</p>
+            <ul>
+                <li>Implemented a React/JavaScript project utilizing the Spotify Web API to compare and contrast a user's music taste with that of their friends.</li>
+                <li>Various dashboards show personal artist/track leaderboards and similarities with friends' listening habits.</li>
+            </ul>
+
+            <div class="item-header">
+                <span class="item-title">Packet Sniffer Utilizing SYN-ACK Packets</span>
+                <span class="item-date">Dec. 2023 – Jan. 2024</span>
+            </div>
+            <p><strong>Technologies:</strong> Python, HTML, CSS, Git, Flask</p>
+            <ul>
+                <li>Designed and implemented a packet sniffer, visualizing how fast a website responds to enable website owners to identify and remedy network congestion.</li>
+                <li>Read SYN-ACK (sync and acknowledge) packets from internet traffic to determine the relative speed of various sites to each other.</li>
+            </ul>
+        </section>
+
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <li><strong>Languages:</strong> Java, Python, C#, MySQL, JavaScript, HTML/CSS</li>
+                <li><strong>Frameworks:</strong> Flask, React, Node.js, JUnit</li>
+                <li><strong>Developer Tools:</strong> Google Colab Notebooks, VS Code, Docker, React, Node.js</li>
+                <li><strong>Libraries:</strong> Hugging Face, OpenCV, pandas, Matplotlib</li>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
