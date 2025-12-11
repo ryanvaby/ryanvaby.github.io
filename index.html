@@ -10,18 +10,20 @@
     
     <style>
         body { font-family: 'Inter', sans-serif; }
-        /* Custom scrollbar */
-        main::-webkit-scrollbar {
-            width: 8px;
+        
+        /* Custom scrollbar - Applied to the HTML element for native scrolling */
+        html::-webkit-scrollbar {
+            width: 10px;
         }
-        main::-webkit-scrollbar-track {
+        html::-webkit-scrollbar-track {
             background: #0f172a; /* slate-950 */
         }
-        main::-webkit-scrollbar-thumb {
+        html::-webkit-scrollbar-thumb {
             background-color: #334155; /* slate-700 */
-            border-radius: 20px;
-            border: 3px solid #0f172a; 
+            border-radius: 5px;
+            border: 2px solid #0f172a; 
         }
+
         /* UW Custom Colors */
         .text-uw-gold { color: #b7a57a; }
         .bg-uw-gold { background-color: #b7a57a; }
@@ -34,11 +36,11 @@
         .hover-text-uw-gold:hover { color: #e8d3a2; }
     </style>
 </head>
-<body class="bg-slate-950 text-slate-200 overflow-x-hidden">
+<body class="bg-slate-950 text-slate-200 overflow-x-hidden selection:bg-[#b7a57a] selection:text-slate-900">
 
     <div class="flex flex-col md:flex-row min-h-screen">
 
-        <div class="md:hidden bg-[#0b0f19] p-4 border-b border-slate-800 sticky top-0 z-50 flex justify-between items-center shadow-md">
+        <div class="md:hidden bg-[#0b0f19]/90 backdrop-blur-md p-4 border-b border-slate-800 sticky top-0 z-50 flex justify-between items-center shadow-md">
             <span class="text-xl font-bold text-white tracking-wider">Ryan Aby</span>
             <button id="mobile-menu-btn" class="text-slate-300 hover:text-white focus:outline-none p-2 rounded-md hover:bg-slate-800 transition-colors">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -66,10 +68,8 @@
             </div>
         </aside>
 
-        <main class="flex-1 md:ml-64 bg-slate-950 p-6 md:p-12 overflow-y-auto overflow-x-hidden">
-            <div class="max-w-4xl mx-auto space-y-16">
-                
-                <header id="about" data-aos="fade-up" class="scroll-mt-24 flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left bg-slate-900 p-8 rounded-3xl shadow-lg border border-slate-800 relative overflow-hidden">
+        <main class="flex-1 md:ml-64 bg-slate-950 p-6 md:p-12">
+            <div class="max-w-4xl mx-auto space-y-24 pb-20"> <header id="about" data-aos="fade-up" class="scroll-mt-32 flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left bg-slate-900 p-8 rounded-3xl shadow-lg border border-slate-800 relative overflow-hidden">
                     <div class="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-[#4b2e83] rounded-full blur-[100px] opacity-20 pointer-events-none"></div>
 
                     <img src="ryan headshot.jpg" alt="Ryan Aby" data-aos="zoom-in" data-aos-delay="200" class="w-40 h-40 rounded-full object-cover shadow-2xl mb-6 sm:mb-0 sm:mr-10 relative z-10 bg-slate-800">
@@ -92,7 +92,7 @@
                     </div>
                 </header>
 
-                <section id="education" class="scroll-mt-24" data-aos="fade-up">
+                <section id="education" class="scroll-mt-32" data-aos="fade-up">
                     <h2 class="text-3xl font-bold text-white mb-8 flex items-center">
                         <span class="bg-[#4b2e83] text-[#b7a57a] py-1.5 px-4 rounded-xl text-lg mr-4 shadow-lg border border-[#b7a57a]/20">01</span> Education
                     </h2>
@@ -120,7 +120,7 @@
                     </div>
                 </section>
 
-                <section id="experience" class="scroll-mt-24">
+                <section id="experience" class="scroll-mt-32">
                     <h2 class="text-3xl font-bold text-white mb-8 flex items-center" data-aos="fade-up">
                         <span class="bg-[#4b2e83] text-[#b7a57a] py-1.5 px-4 rounded-xl text-lg mr-4 shadow-lg border border-[#b7a57a]/20">02</span> Experience
                     </h2>
@@ -185,7 +185,7 @@
                     </div>
                 </section>
 
-                <section id="projects" class="scroll-mt-24">
+                <section id="projects" class="scroll-mt-32">
                     <h2 class="text-3xl font-bold text-white mb-8 flex items-center" data-aos="fade-up">
                         <span class="bg-[#4b2e83] text-[#b7a57a] py-1.5 px-4 rounded-xl text-lg mr-4 shadow-lg border border-[#b7a57a]/20">03</span> Projects
                     </h2>
@@ -223,7 +223,7 @@
                     </div>
                 </section>
 
-                <section id="skills" class="scroll-mt-24 mb-12">
+                <section id="skills" class="scroll-mt-32 mb-12">
                     <h2 class="text-3xl font-bold text-white mb-8 flex items-center" data-aos="fade-up">
                         <span class="bg-[#4b2e83] text-[#b7a57a] py-1.5 px-4 rounded-xl text-lg mr-4 shadow-lg border border-[#b7a57a]/20">04</span> Technical Skills
                     </h2>
@@ -269,15 +269,15 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // Initialize AOS with Apple-like smooth settings
+        // Initialize AOS
+        // 'once: true' is critical for performance on phones (prevents lag on scroll up)
         AOS.init({
-            duration: 1000,    // Slower duration for smoother feel
-            easing: 'ease-out-cubic', // Starts fast, ends slow (very Apple)
-            once: true,        // Animation happens only once
-            offset: 50,        // Trigger animation slightly before element is fully in view
+            duration: 900, 
+            easing: 'ease-out-cubic',
+            once: true,  
+            offset: 50,
         });
 
-        // Toggle mobile menu logic
         const menuBtn = document.getElementById('mobile-menu-btn');
         const sidebar = document.getElementById('sidebar-menu');
         
